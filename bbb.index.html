@@ -1,47 +1,100 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Trends in China and Indonesia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        section {
+            margin-bottom: 1.5em;
+        }
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
+</head>
 <body>
-    <h2>Simple Guessing Game</h2>
-    
-        <input type="radio" id="over35" name="guess" value="over35">
-        <label for="over35">Over 35</label><br>
-        <input type="radio" id="below35" name="guess" value="below35">
-        <label for="below35">Below 35</label><br><br>
-        
-        <button onclick="runGame()">RUN</button>
-        <button onclick="resetGame()">RESET</button><br><br>
-        
-		<label for="Simple Guessing Game">Simple Guessing Game:</label>
-        <input type="text" id="result" readonly>
-<script>
-	function runGame() {
-    const guessOver35 = document.getElementById("over35").checked;
-    const guessBelow35 = document.getElementById("below35").checked;
-    const resultBox = document.getElementById("result");
 
-    if (!guessOver35 && !guessBelow35) {
-        alert("Please select either 'Over 35' or 'Below 35' option.");
-        return;
-    }
+<header>
+    <h1>Technology Trends in China and Indonesia</h1>
+</header>
 
-    const randomNumber = Math.floor(Math.random() * 100);
-    resultBox.value = randomNumber;
+<main>
+    <section>
+        <h2>Project Overview</h2>
+        <p>
+            This project explores technology trends in China and Indonesia. These two countries are leading Asia's digital transformation, each with unique strengths and challenges in their tech landscape.
+        </p >
+        <p>
+            GitHub Project URL: https://github.com/He618/csci101
+        </p >
+    </section>
 
-    if (randomNumber === 35) {
-        alert("It was a tie, please try again.");
-    } else if ((guessOver35 && randomNumber > 35) || (guessBelow35 && randomNumber < 35)) {
-        alert("WIN: Good bet!");
-    } else {
-        alert("LOSE: Wrong bet.");
-    }
-}
+    <section>
+        <h2>E-commerce</h2>
+        <p><strong>China:</strong> E-commerce giants like Alibaba and JD.com dominate global markets with innovations such as live-stream shopping and rapid delivery services.</p >
+        <p><strong>Indonesia:</strong> Platforms like Tokopedia and Shopee are fueling a booming e-commerce market, catering to a mobile-first population in Southeast Asia.</p >
+    </section>
 
-function resetGame() {
-    document.getElementById("result").value = "";
-    document.getElementById("over35").checked = false;
-    document.getElementById("below35").checked = false;
-}
-</script>
+    <section>
+        <h2>Digital Payments</h2>
+        <p><strong>China:</strong> Nearly a cashless society, China relies heavily on Alipay and WeChat Pay, which are deeply integrated into daily life.</p >
+        <p><strong>Indonesia:</strong> Digital payment platforms like GoPay and OVO are expanding financial inclusion and providing accessible financial services, particularly for underserved communities.</p >
+    </section>
+
+    <section>
+        <h2>Connectivity</h2>
+        <p><strong>China:</strong> Rapid 5G rollout supports smart cities and IoT applications.</p >
+        <p><strong>Indonesia:</strong> While progress is being made in 5G, rural connectivity remains a challenge.</p >
+    </section>
+
+    <section>
+        <h2>AI and Education Technology</h2>
+        <p><strong>China:</strong> A global leader in AI, with applications across healthcare, surveillance, and manufacturing.</p >
+        <p><strong>Indonesia:</strong> Rapid growth in EdTech, with platforms like Ruangguru enhancing educational access.</p >
+    </section>
+
+    <section>
+        <h2>Challenges</h2>
+        <p><strong>China:</strong> Faces regulatory scrutiny and privacy concerns.</p >
+        <p><strong>Indonesia:</strong> Working to bridge the digital divide and improve cybersecurity.</p >
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Technology Trends in China and Indonesia</p >
+</footer>
+
 </body>
 </html>
