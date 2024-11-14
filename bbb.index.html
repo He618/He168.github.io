@@ -3,44 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technology Trends in China and Indonesia</title>
+    <title>Advanced Technology Trends in China and Indonesia</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            background-color: #f4f4f9;
             color: #333;
-            background-color: #f9f9f9;
+            padding: 0;
+            margin: 0;
         }
         header {
             background-color: #333;
-            color: #fff;
-            padding: 1em;
+            color: white;
             text-align: center;
+            padding: 1em;
         }
         main {
             max-width: 800px;
             margin: 2em auto;
-            padding: 1em;
+            padding: 2em;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
-            color: #333;
-        }
         section {
-            margin-bottom: 1.5em;
+            margin-bottom: 2em;
         }
-        footer {
-            text-align: center;
-            padding: 1em;
+        button {
+            padding: 0.5em 1em;
             background-color: #333;
-            color: #fff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
-        a {
-            color: #333;
-            text-decoration: none;
+        button:hover {
+            background-color: #555;
+        }
+        .tech-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            margin-bottom: 1em;
+        }
+        .media {
+            margin: 1em 0;
         }
     </style>
 </head>
@@ -52,43 +63,79 @@
 
 <main>
     <section>
-        <h2>Project Overview</h2>
-        <p>
-            This project explores technology trends in China and Indonesia. These two countries are leading Asia's digital transformation, each with unique strengths and challenges in their tech landscape.
-        </p >
-        <p>
-            GitHub Project URL: https://github.com/He618/csci101
-        </p >
+        <h2>Overview</h2>
+        <p>This page covers technology trends in China and Indonesia, including e-commerce, digital payments, and more.</p >
+        <p><strong>GitHub Project:</strong> CSCI101 Project</p >
     </section>
 
+    <!-- iFrames Example -->
     <section>
-        <h2>E-commerce</h2>
-        <p><strong>China:</strong> E-commerce giants like Alibaba and JD.com dominate global markets with innovations such as live-stream shopping and rapid delivery services.</p >
-        <p><strong>Indonesia:</strong> Platforms like Tokopedia and Shopee are fueling a booming e-commerce market, catering to a mobile-first population in Southeast Asia.</p >
+        <h2>Video Introduction</h2>
+        <p>Watch videos about the tech landscapes in China and Indonesia:</p >
+        <iframe src="https://www.youtube.com/embed/someVideoID1" title="China Tech Trends"></iframe>
+        <iframe src="https://www.youtube.com/embed/someVideoID2" title="Indonesia Tech Trends"></iframe>
     </section>
 
+    <!-- Array and Loop Example -->
     <section>
-        <h2>Digital Payments</h2>
-        <p><strong>China:</strong> Nearly a cashless society, China relies heavily on Alipay and WeChat Pay, which are deeply integrated into daily life.</p >
-        <p><strong>Indonesia:</strong> Digital payment platforms like GoPay and OVO are expanding financial inclusion and providing accessible financial services, particularly for underserved communities.</p >
+        <h2>Technology Highlights</h2>
+        <ul class="tech-list" id="tech-list"></ul>
+        <script>
+            // Using an array to store tech highlights
+            const highlights = [
+                "China: Live-stream shopping and rapid delivery.",
+                "Indonesia: Booming e-commerce with Tokopedia and Shopee.",
+                "China: Cashless society with Alipay and WeChat Pay.",
+                "Indonesia: Expanding digital payment systems like GoPay and OVO.",
+                "China: Advanced 5G rollout supporting smart cities.",
+                "Indonesia: Growth in EdTech with Ruangguru."
+            ];
+
+            // Loop to display each highlight
+            const listContainer = document.getElementById("tech-list");
+            highlights.forEach(item => {
+                const listItem = document.createElement("li");
+                listItem.textContent = item;
+                listContainer.appendChild(listItem);
+            });
+        </script>
     </section>
 
+    <!-- If-else and Function Example -->
     <section>
-        <h2>Connectivity</h2>
-        <p><strong>China:</strong> Rapid 5G rollout supports smart cities and IoT applications.</p >
-        <p><strong>Indonesia:</strong> While progress is being made in 5G, rural connectivity remains a challenge.</p >
+        <h2>Explore More About the Region</h2>
+        <p>Choose a country to learn more about its tech innovations:</p >
+        <input type="text" id="country-input" placeholder="Enter 'China' or 'Indonesia'">
+        <button onclick="showCountryInfo()">Show Info</button>
+        <p id="country-info"></p >
+
+        <script>
+            // Function with if-else statement to display information
+            function showCountryInfo() {
+                const countryInput = document.getElementById("country-input").value.toLowerCase();
+                const infoDisplay = document.getElementById("country-info");
+
+                if (countryInput === "china") {
+                    infoDisplay.textContent = "China is known for innovations like live-stream shopping, advanced AI, and a nearly cashless society.";
+                } else if (countryInput === "indonesia") {
+                    infoDisplay.textContent = "Indonesia's tech scene is growing, especially in EdTech and digital payments, making strides in mobile-first solutions.";
+                } else {
+                    infoDisplay.textContent = "Please enter a valid country: 'China' or 'Indonesia'.";
+                }
+            }
+        </script>
     </section>
 
+    <!-- Multimedia Example -->
     <section>
-        <h2>AI and Education Technology</h2>
-        <p><strong>China:</strong> A global leader in AI, with applications across healthcare, surveillance, and manufacturing.</p >
-        <p><strong>Indonesia:</strong> Rapid growth in EdTech, with platforms like Ruangguru enhancing educational access.</p >
-    </section>
-
-    <section>
-        <h2>Challenges</h2>
-        <p><strong>China:</strong> Faces regulatory scrutiny and privacy concerns.</p >
-        <p><strong>Indonesia:</strong> Working to bridge the digital divide and improve cybersecurity.</p >
+        <h2>Multimedia</h2>
+        <div class="media">
+            <p>Listen to an overview of tech trends in Asia:</p >
+            <audio controls>
+                <source src="tech-overview.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
     </section>
 </main>
 
