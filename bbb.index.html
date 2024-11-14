@@ -43,45 +43,5 @@ function resetGame() {
     document.getElementById("below35").checked = false;
 }
 </script>
-
-  <div id="calculator">
-    <h2>Calculator</h2>
-    
-    <!-- Input for price -->
-    <label for="price">Price:</label>
-    <input type="text" id="price" placeholder="Enter price">
-
-    <!-- Button to calculate total -->
-    <button onclick="calculateTotal()">Calculate Total with GST</button>
-    
-    <!-- Output for total price -->
-    <div id="total-output">
-      <label for="total">Total (with 7% GST):</label>
-      <input type="text" id="total" readonly>
-    </div>
-  </div>
-
-  <script>
-    function calculateTotal() {
-      // Get the input price value
-      let price = parseFloat(document.getElementById("price").value);
-      
-      // Check if the price is a valid number
-      if (isNaN(price) || price < 0) {
-        alert("Please enter a valid price");
-        return;
-      }
-
-      // Calculate 7% GST
-      let gst = price * 0.07;
-      
-      // Calculate total price
-      let total = price + gst;
-
-      // Display the total price
-      document.getElementById("total").value = total.toFixed(2);
-    }
-  </script>
-
 </body>
 </html>
