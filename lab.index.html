@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator with GST</title>
+  <style>
+    /* Basic styling for layout */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #calculator {
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 20px;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="calculator">
+    <h2>Calculator</h2>
+    
+    <!-- Input for price -->
+    <label for="price">Price:</label>
+    <input type="text" id="price" placeholder="Enter price">
+
+    <!-- Button to calculate total -->
+    <button onclick="calculateTotal()">Calculate Total with GST</button>
+    
+    <!-- Output for total price -->
+    <div id="total-output">
+      <label for="total">Total (with 7% GST):</label>
+      <input type="text" id="total" readonly>
+    </div>
+  </div>
+
+  <script>
+    function calculateTotal() {
+      // Get the input price value
+      let price = parseFloat(document.getElementById("price").value);
+      
+      // Check if the price is a valid number
+      if (isNaN(price) || price < 0) {
+        alert("Please enter a valid price");
+        return;
+      }
+
+      // Calculate 7% GST
+      let gst = price * 0.07;
+      
+      // Calculate total price
+      let total = price + gst;
+
+      // Display the total price
+      document.getElementById("total").value = total.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>
