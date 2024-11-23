@@ -1,235 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technology Trends: China & Indonesia</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            text-align: center;
-            color: #333;
-        }
-        .button-container {
-            display: flex;
-            justify-content: space-evenly;
-            margin: 20px 0;
-        }
-        .button-container button {
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #007BFF;
-            color: white;
-        }
-        #input-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        #input-container input {
-            padding: 10px;
-            width: 80%;
-            max-width: 400px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .chart-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .chart-container img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 8px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        table th, table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-        table th {
-            background-color: #f4f4f4;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .scrolling-text {
-            overflow: hidden;
-            white-space: nowrap;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            animation: scrollText 10s linear infinite;
-        }
-        @keyframes scrollText {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>China and Indonesia Tech Trends</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      text-align: center;
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .charts-container {
+      display: flex;
+      justify-content: space-around;
+    }
+    .chart {
+      width: 45%;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid black;
+      text-align: center;
+    }
+    th, td {
+      padding: 10px;
+    }
+    .scroll-thank-you {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      background-color: #f8f9fa;
+      animation: scrollText 10s linear infinite;
+    }
+    @keyframes scrollText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Technology Trends: China & Indonesia</h1>
+  </header>
 
-<header>
-    <h1>Technology Trends in China & Indonesia</h1>
-</header>
+  <!-- Introduction -->
+  <div class="container">
+    <section class="section">
+      <h2>Introduction</h2>
+      <p>Explore the technological advancements of China and Indonesia by interacting with the features below.</p >
 
-<section>
-    <h2>Introduction</h2>
-    <div class="button-container">
-        <button onclick="showIcon('shopeepay')">Show ShopeePay Icon</button>
-        <button onclick="showIcon('alipay')">Show Alipay Icon</button>
-        <button onclick="showIcon('chinaMap')">Show China Map</button>
-        <button onclick="showIcon('indonesiaMap')">Show Indonesia Map</button>
-    </div>
-    <div id="icon-display" style="text-align: center; margin: 20px 0;"></div>
-    <div id="input-container">
-        <input type="text" id="countryInput" placeholder="Enter 'China' or 'Indonesia'" oninput="filterContent()">
-    </div>
-</section>
+      <!-- Buttons -->
+      <button onclick="showAlipay()">Show Alipay</button>
+      <button onclick="showShopeePay()">Show ShopeePay</button>
+      <div id="app-icons" style="margin-top: 20px;"></div>
 
-<section id="china-section" style="display: none;">
-    <h2>China: Tech Advancements</h2>
-    <div class="chart-container">
-        <h3>Age Distribution of Tech Users</h3>
-        < img src="https://images.app.goo.gl/vUMrDA9hHGE4gN9b8" alt="Age Chart for China">
-    </div>
-    <table>
+      <!-- Input field -->
+      <label for="country-input">Enter a country (China or Indonesia):</label>
+      <input type="text" id="country-input" oninput="showCountryInfo()">
+      <div id="country-info" style="margin-top: 20px;"></div>
+
+      <!-- Maps -->
+      <div style="display: flex; justify-content: space-around; margin-top: 20px;">
+        <div>
+          <h3>China Map</h3>
+          < img src="C:\Users\lh156\OneDrive\Pictures\China Map.jpg" alt="China Map" style="width: 100%; max-width: 300px;">
+        </div>
+        <div>
+          <h3>Indonesia Map</h3>
+          < img src="https://images.app.goo.gl/uBCZ9gipGHy8kg5V6" alt="Indonesia Map" style="width: 100%; max-width: 300px;">
+        </div>
+      </div>
+    </section>
+
+    <!-- Body -->
+    <section class="section">
+      <h2>Body</h2>
+      <p>The following charts and tables show the age distribution of technology usage in China and Indonesia.</p >
+
+      <!-- Charts -->
+      <div class="charts-container">
+        <div class="chart">
+          <h3>Age Distribution in China</h3>
+          < img src="https://images.app.goo.gl/vUMrDA9hHGE4gN9b8" alt="China Age Distribution" style="width: 100%;">
+        </div>
+        <div class="chart">
+          <h3>Age Distribution in Indonesia</h3>
+          < img src="https://images.app.goo.gl/TiW3dMGpxPy2Xx8i6" alt="Indonesia Age Distribution" style="width: 100%;">
+        </div>
+      </div>
+
+      <!-- Table -->
+      <h3>Age and Usage Percentage</h3>
+      <table>
         <thead>
-            <tr>
-                <th>Age Group</th>
-                <th>Percentage</th> 
-            </tr>
+          <tr>
+            <th>Country</th>
+            <th>Age Group</th>
+            <th>Usage Percentage</th>
+          </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>18-25</td>
-                <td>40%</td>
-            </tr>
-            <tr>
-                <td>26-35</td>
-                <td>30%</td>
-            </tr>
-            <tr>
-                <td>36-50</td>
-                <td>20%</td>
-            </tr>
-            <tr>
-                <td>50+</td>
-                <td>10%</td>
-            </tr>
+          <tr>
+            <td>China</td>
+            <td>18-25</td>
+            <td>35%</td>
+          </tr>
+          <tr>
+            <td>China</td>
+            <td>26-35</td>
+            <td>30%</td>
+          </tr>
+          <tr>
+            <td>Indonesia</td>
+            <td>18-25</td>
+            <td>40%</td>
+          </tr>
+          <tr>
+            <td>Indonesia</td>
+            <td>26-35</td>
+            <td>28%</td>
+          </tr>
         </tbody>
-    </table>
-</section>
+      </table>
+    </section>
+  </div>
 
-<section id="indonesia-section" style="display: none;">
-    <h2>Indonesia: Tech Advancements</h2>
-    <div class="chart-container">
-        <h3>Age Distribution of Tech Users</h3>
-        < img src="https://images.app.goo.gl/TiW3dMGpxPy2Xx8i6" alt="Age Chart for Indonesia">
-    </div>
-    <table>
-        <thead>
-            <tr>
-                <th>Age Group</th>
-                <th>Percentage</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>18-25</td>
-                <td>50%</td>
-            </tr>
-            <tr>
-                <td>26-35</td>
-                <td>35%</td>
-            </tr>
-            <tr>
-                <td>36-50</td>
-                <td>10%</td>
-            </tr>
-            <tr>
-                <td>50+</td>
-                <td>5%</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+  <!-- Conclusion -->
+  <div class="container">
+    <section class="section">
+      <h2>Conclusion</h2>
+      <p>Watch the video below to learn more about technology developments in China and Indonesia:</p >
+      Click here to watch the video
+    </section>
+  </div>
 
-<section>
-    <h2>Conclusion</h2>
-    <p>For more information about the technological developments in China and Indonesia, watch the video below:</p >
-    Watch the video
-</section>
+  <footer>
+    <p>Created by He Li & Partner</p >
+  </footer>
 
-<div class="scrolling-text">
-    Thank You for Exploring Technology Trends in China and Indonesia!
-</div>
+  <!-- Scroll Thank You -->
+  <div class="scroll-thank-you">
+    <p>Thank you for exploring Technology Trends in China and Indonesia!</p >
+  </div>
 
-<script>
-    function showIcon(type) {
-        const display = document.getElementById('icon-display');
-        display.innerHTML = '';
-        if (type === 'shopeepay') {
-            display.innerHTML = '< img src="https://images.app.goo.gl/fqspZLERfGyiP9JB7" alt="ShopeePay Icon" style="width: 100px;">';
-        } else if (type === 'alipay') {
-            display.innerHTML = '< img src="https://images.app.goo.gl/uHetoJ6bnHZaHtKF9" alt="Alipay Icon" style="width: 100px;">';
-        } else if (type === 'chinaMap') {
-            display.innerHTML = '< img src="C:\Users\lh156\OneDrive\Pictures\China Map.jpg.crdownload" style="width: 300px;">';
-        } else if (type === 'indonesiaMap') {
-            display.innerHTML = '< img src="https://images.app.goo.gl/uBCZ9gipGHy8kg5V6" alt="Indonesia Map" style="width: 300px;">';
-        }
+  <!-- JavaScript -->
+  <script>
+    function showAlipay() {
+      document.getElementById("app-icons").innerHTML = '< img src="https://images.app.goo.gl/uHetoJ6bnHZaHtKF9" alt="Alipay Icon" style="width: 100px;">';
     }
 
-    function filterContent() {
-        const input = document.getElementById('countryInput').value.toLowerCase();
-        const chinaSection = document.getElementById('china-section');
-        const indonesiaSection = document.getElementById('indonesia-section');
-
-        if (input === 'china') {
-            chinaSection.style.display = 'block';
-            indonesiaSection.style.display = 'none';
-        } else if (input === 'indonesia') {
-            indonesiaSection.style.display = 'block';
-            chinaSection.style.display = 'none';
-        } else {
-            chinaSection.style.display = 'none';
-            indonesiaSection.style.display = 'none';
-        }
+    function showShopeePay() {
+      document.getElementById("app-icons").innerHTML = '< img src="https://images.app.goo.gl/fqspZLERfGyiP9JB7" alt="ShopeePay Icon" style="width: 100px;">';
     }
-</script>
 
+    function showCountryInfo() {
+      const country = document.getElementById("country-input").value.toLowerCase();
+      const infoDiv = document.getElementById("country-info");
+      if (country === "china") {
+        infoDiv.innerHTML = "<p>China is a leader in e-commerce, digital payments, and AI.</p >";
+      } else if (country === "indonesia") {
+        infoDiv.innerHTML = "<p>Indonesia is making strides in EdTech, e-commerce, and digital inclusion.</p >";
+      } else {
+        infoDiv.innerHTML = "<p>Please enter 'China' or 'Indonesia'.</p >";
+      }
+    }
+  </script>
 </body>
 </html>
