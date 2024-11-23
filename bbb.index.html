@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Trends in China and Indonesia</title>
+    <title>Technology Trends: China & Indonesia</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
         header {
-            background: #333;
-            color: #fff;
-            padding: 1rem;
+            background-color: #333;
+            color: white;
             text-align: center;
+            padding: 1rem;
         }
         section {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background: #fff;
+            background: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -30,71 +29,207 @@
             text-align: center;
             color: #333;
         }
-        .tech-section {
+        .button-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
+            justify-content: space-evenly;
+            margin: 20px 0;
         }
-        .tech-section img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 10px 0;
+        .button-container button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
         }
-        .tech-section p {
+        #input-container {
             text-align: center;
-            margin: 0;
-            font-size: 1.1rem;
+            margin: 20px 0;
+        }
+        #input-container input {
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .chart-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .chart-container img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        table th {
+            background-color: #f4f4f4;
         }
         footer {
             text-align: center;
-            padding: 10px;
-            background: #333;
-            color: #fff;
+            margin-top: 20px;
+        }
+        .scrolling-text {
+            overflow: hidden;
+            white-space: nowrap;
             position: fixed;
             bottom: 0;
             width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            animation: scrollText 10s linear infinite;
+        }
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Technology Trends: China & Indonesia</h1>
-    </header>
+<header>
+    <h1>Technology Trends in China & Indonesia</h1>
+</header>
 
-    <section>
-        <h2>Overview</h2>
-        <p>China and Indonesia are leading Asia’s digital transformation with unique strengths and challenges. Explore their advancements in e-commerce, digital payments, AI, and connectivity.</p >
-    </section>
+<section>
+    <h2>Introduction</h2>
+    <div class="button-container">
+        <button onclick="showIcon('shopeepay')">Show ShopeePay Icon</button>
+        <button onclick="showIcon('alipay')">Show Alipay Icon</button>
+        <button onclick="showIcon('chinaMap')">Show China Map</button>
+        <button onclick="showIcon('indonesiaMap')">Show Indonesia Map</button>
+    </div>
+    <div id="icon-display" style="text-align: center; margin: 20px 0;"></div>
+    <div id="input-container">
+        <input type="text" id="countryInput" placeholder="Enter 'China' or 'Indonesia'" oninput="filterContent()">
+    </div>
+</section>
 
-    <section class="tech-section">
-        <h2>China: A Cashless and AI Leader</h2>
-        < img id="china-tech" src="china-tech.jpg" alt="China Technology" title="Click to learn more about China's tech">
-        <p>China’s advancements in e-commerce, digital payments (Alipay & WeChat Pay), AI, and 5G make it a global tech leader.</p >
-    </section>
+<section id="china-section" style="display: none;">
+    <h2>China: Tech Advancements</h2>
+    <div class="chart-container">
+        <h3>Age Distribution of Tech Users</h3>
+        < img src="china-age-chart.jpg" alt="Age Chart for China">
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Age Group</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>18-25</td>
+                <td>40%</td>
+            </tr>
+            <tr>
+                <td>26-35</td>
+                <td>30%</td>
+            </tr>
+            <tr>
+                <td>36-50</td>
+                <td>20%</td>
+            </tr>
+            <tr>
+                <td>50+</td>
+                <td>10%</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
-    <section class="tech-section">
-        <h2>Indonesia: A Booming E-Commerce Market</h2>
-        < img id="indonesia-tech" src="indonesia-tech.jpg" alt="Indonesia Technology" title="Click to learn more about Indonesia's tech">
-        <p>Indonesia’s Tokopedia, Shopee, GoPay, and Ruangguru are driving growth, expanding financial inclusion, and improving education access.</p >
-    </section>
+<section id="indonesia-section" style="display: none;">
+    <h2>Indonesia: Tech Advancements</h2>
+    <div class="chart-container">
+        <h3>Age Distribution of Tech Users</h3>
+        < img src="indonesia-age-chart.jpg" alt="Age Chart for Indonesia">
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Age Group</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>18-25</td>
+                <td>50%</td>
+            </tr>
+            <tr>
+                <td>26-35</td>
+                <td>35%</td>
+            </tr>
+            <tr>
+                <td>36-50</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>50+</td>
+                <td>5%</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Technology Trends | Powered by Collaboration</p >
-    </footer>
+<section>
+    <h2>Conclusion</h2>
+    <p>For more information about the technological developments in China and Indonesia, watch the video below:</p >
+    Watch the video
+</section>
 
-    <script>
-        // Add interactivity to the images
-        document.getElementById('china-tech').addEventListener('click', function() {
-            alert('China is a global leader in AI, e-commerce, and nearly cashless society with Alipay and WeChat Pay.');
-        });
+<div class="scrolling-text">
+    Thank You for Exploring Technology Trends in China and Indonesia!
+</div>
 
-        document.getElementById('indonesia-tech').addEventListener('click', function() {
-            alert('Indonesia is advancing in e-commerce with platforms like Tokopedia and Shopee, expanding financial inclusion.');
-        });
-    </script>
+<script>
+    function showIcon(type) {
+        const display = document.getElementById('icon-display');
+        display.innerHTML = '';
+        if (type === 'shopeepay') {
+            display.innerHTML = '< img src="shopeepay-icon.jpg" alt="ShopeePay Icon" style="width: 100px;">';
+        } else if (type === 'alipay') {
+            display.innerHTML = '< img src="alipay-icon.jpg" alt="Alipay Icon" style="width: 100px;">';
+        } else if (type === 'chinaMap') {
+            display.innerHTML = '< img src="china-map.jpg" alt="China Map" style="width: 300px;">';
+        } else if (type === 'indonesiaMap') {
+            display.innerHTML = '< img src="indonesia-map.jpg" alt="Indonesia Map" style="width: 300px;">';
+        }
+    }
+
+    function filterContent() {
+        const input = document.getElementById('countryInput').value.toLowerCase();
+        const chinaSection = document.getElementById('china-section');
+        const indonesiaSection = document.getElementById('indonesia-section');
+
+        if (input === 'china') {
+            chinaSection.style.display = 'block';
+            indonesiaSection.style.display = 'none';
+        } else if (input === 'indonesia') {
+            indonesiaSection.style.display = 'block';
+            chinaSection.style.display = 'none';
+        } else {
+            chinaSection.style.display = 'none';
+            indonesiaSection.style.display = 'none';
+        }
+    }
+</script>
 
 </body>
 </html>
