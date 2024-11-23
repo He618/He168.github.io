@@ -3,145 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Technology Trends in China and Indonesia</title>
+    <title>Tech Trends in China and Indonesia</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            padding: 0;
+            line-height: 1.6;
             margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
         header {
-            background-color: #333;
-            color: white;
+            background: #333;
+            color: #fff;
+            padding: 1rem;
             text-align: center;
-            padding: 1em;
         }
-        main {
+        section {
             max-width: 800px;
-            margin: 2em auto;
-            padding: 2em;
-            background-color: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        section {
-            margin-bottom: 2em;
+        h1, h2 {
+            text-align: center;
+            color: #333;
         }
-        button {
-            padding: 0.5em 1em;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+        .tech-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
         }
-        button:hover {
-            background-color: #555;
+        .tech-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
         }
-        .tech-list {
-            list-style-type: none;
-            padding: 0;
+        .tech-section p {
+            text-align: center;
+            margin: 0;
+            font-size: 1.1rem;
         }
-        iframe {
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
             width: 100%;
-            height: 300px;
-            border: none;
-            margin-bottom: 1em;
-        }
-        .media {
-            margin: 1em 0;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Technology Trends in China and Indonesia</h1>
-</header>
+    <header>
+        <h1>Technology Trends: China & Indonesia</h1>
+    </header>
 
-<main>
     <section>
         <h2>Overview</h2>
-        <p>This page covers technology trends in China and Indonesia, including e-commerce, digital payments, and more.</p >
-        <p><strong>GitHub Project:</strong> CSCI101 Project</p >
+        <p>China and Indonesia are leading Asia’s digital transformation with unique strengths and challenges. Explore their advancements in e-commerce, digital payments, AI, and connectivity.</p >
     </section>
 
-    <!-- iFrames Example -->
-    <section>
-        <h2>Video Introduction</h2>
-        <p>Watch videos about the tech landscapes in China and Indonesia:</p >
-        <iframe src="https://www.youtube.com/embed/someVideoID1" title="China Tech Trends"></iframe>
-        <iframe src="https://www.youtube.com/embed/someVideoID2" title="Indonesia Tech Trends"></iframe>
+    <section class="tech-section">
+        <h2>China: A Cashless and AI Leader</h2>
+        < img id="china-tech" src="china-tech.jpg" alt="China Technology" title="Click to learn more about China's tech">
+        <p>China’s advancements in e-commerce, digital payments (Alipay & WeChat Pay), AI, and 5G make it a global tech leader.</p >
     </section>
 
-    <!-- Array and Loop Example -->
-    <section>
-        <h2>Technology Highlights</h2>
-        <ul class="tech-list" id="tech-list"></ul>
-        <script>
-            // Using an array to store tech highlights
-            const highlights = [
-                "China: Live-stream shopping and rapid delivery.",
-                "Indonesia: Booming e-commerce with Tokopedia and Shopee.",
-                "China: Cashless society with Alipay and WeChat Pay.",
-                "Indonesia: Expanding digital payment systems like GoPay and OVO.",
-                "China: Advanced 5G rollout supporting smart cities.",
-                "Indonesia: Growth in EdTech with Ruangguru."
-            ];
-
-            // Loop to display each highlight
-            const listContainer = document.getElementById("tech-list");
-            highlights.forEach(item => {
-                const listItem = document.createElement("li");
-                listItem.textContent = item;
-                listContainer.appendChild(listItem);
-            });
-        </script>
+    <section class="tech-section">
+        <h2>Indonesia: A Booming E-Commerce Market</h2>
+        < img id="indonesia-tech" src="indonesia-tech.jpg" alt="Indonesia Technology" title="Click to learn more about Indonesia's tech">
+        <p>Indonesia’s Tokopedia, Shopee, GoPay, and Ruangguru are driving growth, expanding financial inclusion, and improving education access.</p >
     </section>
 
-    <!-- If-else and Function Example -->
-    <section>
-        <h2>Explore More About the Region</h2>
-        <p>Choose a country to learn more about its tech innovations:</p >
-        <input type="text" id="country-input" placeholder="Enter 'China' or 'Indonesia'">
-        <button onclick="showCountryInfo()">Show Info</button>
-        <p id="country-info"></p >
+    <footer>
+        <p>&copy; 2024 Technology Trends | Powered by Collaboration</p >
+    </footer>
 
-        <script>
-            // Function with if-else statement to display information
-            function showCountryInfo() {
-                const countryInput = document.getElementById("country-input").value.toLowerCase();
-                const infoDisplay = document.getElementById("country-info");
+    <script>
+        // Add interactivity to the images
+        document.getElementById('china-tech').addEventListener('click', function() {
+            alert('China is a global leader in AI, e-commerce, and nearly cashless society with Alipay and WeChat Pay.');
+        });
 
-                if (countryInput === "china") {
-                    infoDisplay.textContent = "China is known for innovations like live-stream shopping, advanced AI, and a nearly cashless society.";
-                } else if (countryInput === "indonesia") {
-                    infoDisplay.textContent = "Indonesia's tech scene is growing, especially in EdTech and digital payments, making strides in mobile-first solutions.";
-                } else {
-                    infoDisplay.textContent = "Please enter a valid country: 'China' or 'Indonesia'.";
-                }
-            }
-        </script>
-    </section>
-
-    <!-- Multimedia Example -->
-    <section>
-        <h2>Multimedia</h2>
-        <div class="media">
-            <p>Listen to an overview of tech trends in Asia:</p >
-            <audio controls>
-                <source src="tech-overview.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2024 Technology Trends in China and Indonesia</p >
-</footer>
+        document.getElementById('indonesia-tech').addEventListener('click', function() {
+            alert('Indonesia is advancing in e-commerce with platforms like Tokopedia and Shopee, expanding financial inclusion.');
+        });
+    </script>
 
 </body>
 </html>
