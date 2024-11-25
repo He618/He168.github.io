@@ -124,6 +124,7 @@
       padding: 10px;
       margin-top: 40px;
     }
+
   </style>
 </head>
 <body>
@@ -135,7 +136,8 @@
     <!-- Introduction -->
     <section id="introduction">
       <h2>Introduction</h2>
-      <p>Explore the technological advancements of China and Indonesia. Use the interactive features below to learn more.</p >
+      <p>We want to cover the technology trends for both China and Indonesia. These countries are leading Asia’s digital transformation, each with unique strengths and challenges in the tech landscape. China’s e-commerce giants, like Alibaba and JD.com, dominate global markets with features like live-stream shopping and rapid delivery, while Indonesia’s platforms, such as Tokopedia and Shopee, are fueling a booming e-commerce market in Southeast Asia, catering to a mobile-first population. In digital payments, China has achieved a nearly cashless society with Alipay and WeChat Pay deeply embedded in daily life. In contrast, because Indonesia is a developing country, digital payment platforms, like GoPay and OVO, are expanding financial inclusion and providing accessible financial services, particularly for underserved communities. When it comes to connectivity, China has quickly rolled out 5G networks, which support innovations like smart cities and IoT applications. Indonesia is also making strides in 5G, though rural connectivity remains a challenge. Additionally, China is a global leader in AI, applying advanced technologies across healthcare, surveillance, and manufacturing, while Indonesia has seen rapid growth in EdTech, with platforms like Ruangguru enhancing access to education. Despite their progress, both countries face challenges: China contends with regulatory scrutiny and privacy concerns, while Indonesia is working to bridge the digital divide and improve cybersecurity. As both nations continue to invest in technology and infrastructure, they are poised to drive significant digital innovation, influencing tech trends throughout Asia and beyond in the years ahead.
+</p >
       <div style="margin-top: 20px;">
         <button onclick="showAlipay()">Show Alipay</button>
         <button onclick="showShopeePay()">Show ShopeePay</button>
@@ -163,11 +165,11 @@
       <div class="charts-container">
         <div class="chart">
           <h3>Age Distribution in China</h3>
-          < img src="https://via.placeholder.com/400x300" alt="China Age Distribution" style="width: 100%;">
+          
         </div>
         <div class="chart">
           <h3>Age Distribution in Indonesia</h3>
-          < img src="https://via.placeholder.com/400x300" alt="Indonesia Age Distribution" style="width: 100%;">
+		  <img src="https://i.imgur.com/CuelAjM.jpeg" alt="Example Image" style="max-width: 100%; height: auto;">
         </div>
       </div>
       <h3>Age and Usage Percentage</h3>
@@ -208,7 +210,8 @@
     <section id="conclusion">
       <h2>Conclusion</h2>
       <p>Watch the video below to learn more about technology developments in China and Indonesia:</p >
-      Click here to watch the video
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/a_jis_XlUlo?si=XPHabH2Qn6etbM1U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/M2zVGqTddf0?si=H4yxnEtVEYQUhg5-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
   </div>
 
@@ -241,20 +244,20 @@
     }
 
     function showAlipay() {
-      document.getElementById("app-icons").innerHTML = '< img src="https://via.placeholder.com/100" alt="Alipay Icon">';
+      document.getElementById("app-icons").innerHTML = ' <img src="https://i.imgur.com/NqWRk9y.jpeg" alt="Example Image" style="max-width: 100%; height: auto;">';
     }
 
     function showShopeePay() {
-      document.getElementById("app-icons").innerHTML = '< img src="https://via.placeholder.com/100" alt="ShopeePay Icon">';
+      document.getElementById("app-icons").innerHTML = '<img src="https://i.imgur.com/wsIXPZz.png" alt="Example Image" style="max-width: 100%; height: auto;">';
     }
 
     function showCountryInfo() {
       const country = document.getElementById("country-input").value.toLowerCase();
       const infoDiv = document.getElementById("country-info");
       if (country === "china") {
-        infoDiv.innerHTML = "<p>China is a leader in e-commerce, digital payments, and AI.</p >";
+        infoDiv.innerHTML = "<p>China’s e-commerce giants, like Alibaba and JD.com, dominate global markets with features like live-stream shopping and rapid delivery。In digital payments, China has achieved a nearly cashless society with Alipay and WeChat Pay deeply embedded in daily life.  When it comes to connectivity, China has quickly rolled out 5G networks, which support innovations like smart cities and IoT applications.Additionally, China is a global leader in AI, applying advanced technologies across healthcare, surveillance, and manufacturing。 China contends with regulatory scrutiny and privacy concerns</p >";
       } else if (country === "indonesia") {
-        infoDiv.innerHTML = "<p>Indonesia is making strides in EdTech, e-commerce, and digital inclusion.</p >";
+        infoDiv.innerHTML = "<p>Indonesia’s platforms, such as Tokopedia and Shopee, are fueling a booming e-commerce market in Southeast Asia, catering to a mobile-first population.In digital payments,because Indonesia is a developing country, digital payment platforms, like GoPay and OVO,are expanding financial inclusion and providing accessible financial services, particularly for underserved communities.Indonesia is also making strides in 5G, though rural connectivity remains a challenge.Indonesia has seen rapid growth in EdTech, with platforms like Ruangguru enhancing access to education.</p >";
       } else {
         infoDiv.innerHTML = "<p>Please enter 'China' or 'Indonesia'.</p >";
       }
