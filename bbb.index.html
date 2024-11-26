@@ -124,6 +124,19 @@
       padding: 10px;
       margin-top: 40px;
     }
+    .app-icon-container {
+      display: flex;
+      align-items: center;
+    }
+    .app-icon-container img {
+      max-width: 50px;
+      height: auto;
+      margin-right: 10px; 
+    }
+    .app-icon-container p {
+      margin: 0; 
+      font-size: 16px;
+    }
 
   </style>
 </head>
@@ -136,16 +149,7 @@
     <!-- Introduction -->
     <section id="introduction">
       <h2>Introduction</h2>
-      <p>We want to cover the technology trends for both China and Indonesia. These countries are leading Asia’s digital transformation, each with unique strengths and challenges in the tech landscape. China’s e-commerce giants, like Alibaba and JD.com, dominate global markets with features like live-stream shopping and rapid delivery, while Indonesia’s platforms, such as Tokopedia and Shopee, are fueling a booming e-commerce market in Southeast Asia, catering to a mobile-first population. In digital payments, China has achieved a nearly cashless society with Alipay and WeChat Pay deeply embedded in daily life. In contrast, because Indonesia is a developing country, digital payment platforms, like GoPay and OVO, are expanding financial inclusion and providing accessible financial services, particularly for underserved communities. When it comes to connectivity, China has quickly rolled out 5G networks, which support innovations like smart cities and IoT applications. Indonesia is also making strides in 5G, though rural connectivity remains a challenge. Additionally, China is a global leader in AI, applying advanced technologies across healthcare, surveillance, and manufacturing, while Indonesia has seen rapid growth in EdTech, with platforms like Ruangguru enhancing access to education. Despite their progress, both countries face challenges: China contends with regulatory scrutiny and privacy concerns, while Indonesia is working to bridge the digital divide and improve cybersecurity. As both nations continue to invest in technology and infrastructure, they are poised to drive significant digital innovation, influencing tech trends throughout Asia and beyond in the years ahead.
-</p >
-      <div style="margin-top: 20px;">
-        <button onclick="showAlipay()">Show Alipay</button>
-        <button onclick="showShopeePay()">Show ShopeePay</button>
-        <div id="app-icons" style="margin-top: 20px;"></div>
-      </div>
-      <label for="country-input">Enter a country (China or Indonesia):</label>
-      <input type="text" id="country-input" placeholder="Type here..." oninput="showCountryInfo()">
-      <div id="country-info" style="margin-top: 20px;"></div>
+      <p>We want to cover the technology trends for both China and Indonesia. These countries are leading Asia’s digital transformation, each with unique strengths and challenges in the tech landscape. China’s e-commerce giants, like Alibaba and JD.com, dominate global markets with features like live-stream shopping and rapid delivery, while Indonesia’s platforms, such as Tokopedia and Shopee, are fueling a booming e-commerce market in Southeast Asia, catering to a mobile-first population. In digital payments, China has achieved a nearly cashless society with Alipay and WeChat Pay deeply embedded in daily life. In contrast, because Indonesia is a developing country, digital payment platforms, like GoPay and OVO, are expanding financial inclusion and providing accessible financial services, particularly for underserved communities. When it comes to connectivity, China has quickly rolled out 5G networks, which support innovations like smart cities and IoT applications. Indonesia is also making strides in 5G, though rural connectivity remains a challenge. Additionally, China is a global leader in AI, applying advanced technologies across healthcare, surveillance, and manufacturing, while Indonesia has seen rapid growth in EdTech, with platforms like Ruangguru enhancing access to education. Despite their progress, both countries face challenges: China contends with regulatory scrutiny and privacy concerns, while Indonesia is working to bridge the digital divide and improve cybersecurity. As both nations continue to invest in technology and infrastructure, they are poised to drive significant digital innovation, influencing tech trends throughout Asia and beyond in the years ahead.</p >
     </section>
 
     <!-- Interactive Map -->
@@ -158,21 +162,42 @@
       </div>
       <div id="map"></div>
     </section>
-
-    <!-- Charts and Tables -->
-    <section id="charts-section">
-      <h2>Charts and Tables</h2>
-      <div class="charts-container">
-        <div class="chart">
-          <h3>Age Distribution in China</h3>
-          
-        </div>
-        <div class="chart">
-          <h3>Age Distribution in Indonesia</h3>
-		  <img src="https://i.imgur.com/CuelAjM.jpeg" alt="Example Image" style="max-width: 100%; height: auto;">
-        </div>
+	<!-- Digital Payment -->
+	<section id="Digital Payment">
+	  <h2>Digital Payment</h2>
+      <div style="margin-top: 20px;">
+        <button onclick="showAlipay()">Show Alipay</button>
+        <button onclick="showShopeePay()">Show ShopeePay</button>
+        <div id="app-icons" style="margin-top: 20px;"></div>
       </div>
-      <h3>Age and Usage Percentage</h3>
+	 </section>
+	 <!-- 5G Development -->
+	 <section id="5G Development">
+	  <h2>5G Development</h2>
+      <label for="country-input">Enter a country (China or Indonesia):</label>
+      <input type="text" id="country-input" placeholder="Type here..." oninput="showCountryInfo()">
+      <div id="country-info" style="margin-top: 20px;"></div>
+     </section>
+    <!-- E-commerce Market -->
+    <section id="E-commerce Market">
+      <h2>E-commerce Market</h2>
+	  <div class="charts-container">
+        <div class="chart">
+          <h3>China's e-commerce market growth</h3>
+          <img src="https://i.imgur.com/0Hb0pAi.jpeg" alt="Example Image" style="max-width: 100%; height: auto;"> 
+		  <p><cite>The chart</cite> by Azoya Consulting.</p >
+        </div>
+        <div class="chart">
+          <h3> Indonesia’s Growing E-Commerce Market</h3>
+		  <img src="https://i.imgur.com/nOeYrZt.jpeg" alt="Example Image" style="max-width: 100%; height: auto;">
+		  <p><cite>The Chart</cite> by Blakey, Douglas, and Douglas Blakey. </p >
+        </div>
+	  </div>
+	  </section>
+    <!-- AI Use -->
+    <section id="AI Use">
+	  <h2>AI Use</h2>
+	  <div class="AI Use">
       <table>
         <thead>
           <tr>
@@ -204,6 +229,7 @@
           </tr>
         </tbody>
       </table>
+	  </div>
     </section>
 
     <!-- Conclusion -->
@@ -244,20 +270,20 @@
     }
 
     function showAlipay() {
-      document.getElementById("app-icons").innerHTML = ' <img src="https://i.imgur.com/NqWRk9y.jpeg" alt="Example Image" style="max-width: 100%; height: auto;">';
+      document.getElementById("app-icons").innerHTML = ' <div class="app-icon-container"><img src="https://i.imgur.com/NqWRk9y.jpeg" alt="Example Image" style="max-width: 100%; height: auto;"><p>Alipay is an eWallet app that lets users store debit or credit card details to make online and in-store purchases using their phones. It works as a mobile wallet-based payment method, similar to the likes of Apple Pay. Alipay can be used to make purchases where the merchant has listed Alipay as a valid form of payment.</p></div>'; 
     }
 
     function showShopeePay() {
-      document.getElementById("app-icons").innerHTML = '<img src="https://i.imgur.com/wsIXPZz.png" alt="Example Image" style="max-width: 100%; height: auto;">';
+      document.getElementById("app-icons").innerHTML = '<div class="app-icon-container"><img src="https://i.imgur.com/wsIXPZz.png" alt="Example Image" style="max-width: 100%; height: auto;"><p>ShopeePay is a digital payment system and e-wallet developed by Shopee, a leading Southeast Asian e-commerce platform. It enables secure, fast payments for goods and services through mobile devices, both within the Shopee app and at offline merchants.</p></div>';
     }
 
     function showCountryInfo() {
       const country = document.getElementById("country-input").value.toLowerCase();
       const infoDiv = document.getElementById("country-info");
       if (country === "china") {
-        infoDiv.innerHTML = "<p>China’s e-commerce giants, like Alibaba and JD.com, dominate global markets with features like live-stream shopping and rapid delivery。In digital payments, China has achieved a nearly cashless society with Alipay and WeChat Pay deeply embedded in daily life.  When it comes to connectivity, China has quickly rolled out 5G networks, which support innovations like smart cities and IoT applications.Additionally, China is a global leader in AI, applying advanced technologies across healthcare, surveillance, and manufacturing。 China contends with regulatory scrutiny and privacy concerns</p >";
+        infoDiv.innerHTML = "<p>5G mobile subscribers in China reached 966 million.Additionally, 5G mobile subscribers in the Asian nation reached 966 million, the ministry added. China also claims global leadership in 5G technology, with 42% of the world's 5G standard essential patent declarations originating from the country.</p>";
       } else if (country === "indonesia") {
-        infoDiv.innerHTML = "<p>Indonesia’s platforms, such as Tokopedia and Shopee, are fueling a booming e-commerce market in Southeast Asia, catering to a mobile-first population.In digital payments,because Indonesia is a developing country, digital payment platforms, like GoPay and OVO,are expanding financial inclusion and providing accessible financial services, particularly for underserved communities.Indonesia is also making strides in 5G, though rural connectivity remains a challenge.Indonesia has seen rapid growth in EdTech, with platforms like Ruangguru enhancing access to education.</p >";
+        infoDiv.innerHTML = "<p>While 5G is at the start of its journey in Indonesia, the ambitious plans of the government and operators means that more than 32% of connections are expected to run over 5G by 2030, according to the GSMA Intelligence report.</p >";
       } else {
         infoDiv.innerHTML = "<p>Please enter 'China' or 'Indonesia'.</p >";
       }
