@@ -96,27 +96,32 @@
     th, td {
       padding: 10px;
     }
-	.marquee-container {
-      overflow: hidden; 
+    .marquee-container {
+      overflow: hidden;
       white-space: nowrap;
       width: 100%;
       background-color: #f8f8fa;
       padding: 10px 0; 
       border-top: 2px solid #ddd; 
-      position: relative; 
+      position: relative;
     }
 
     .marquee-text {
       display: inline-block;
-      font-size: 24px; 
-      color: #007BFF; 
-      animation: scroll 10s linear infinite; 
+      font-size: 24px;
+      color: #007BFF;
+      white-space: nowrap; 
+      animation: scroll 30s linear infinite;
+      padding-left: 100%;
     }
 
     @keyframes scroll {
       0% { transform: translateX(100%); } 
-      100% { transform: translateX(-100%); } 
+      50% { transform: translateX(-100%); }
+      51% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
+
     footer {
       width: 100%;
       text-align: center;
@@ -124,19 +129,23 @@
       padding: 10px;
       margin-top: 40px;
     }
+
     .app-icon-container {
       display: flex;
       align-items: center;
     }
+
     .app-icon-container img {
       max-width: 50px;
       height: auto;
-      margin-right: 10px; 
+      margin-right: 10px;
     }
+
     .app-icon-container p {
-      margin: 0; 
+      margin: 0;
       font-size: 16px;
     }
+
 
   </style>
 </head>
