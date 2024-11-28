@@ -145,6 +145,68 @@
       margin: 0;
       font-size: 16px;
     }
+    form {
+      background-color: white;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    form h2 {
+      font-size: 1.8em;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 150px;
+    }
+
+    .rating {
+      margin-bottom: 20px;
+    }
+
+    .rating label {
+      font-size: 1em;
+      margin-right: 12px;
+    }
+
+    .rating input {
+      margin-right: 12px;
+    }
+
+    .submit-btn {
+      background-color: #2575fc;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1.1em;
+    }
+
+    .submit-btn:hover {
+      background-color: #1d5bbf;
+    }
 
 
   </style>
@@ -157,8 +219,8 @@
   <div class="container">
     <!-- Introduction -->
     <section id="introduction">
-      <h2>Introduction</h2>
-      <p>We want to cover the technology trends for both China and Indonesia. These countries are leading Asia’s digital transformation, each with unique strengths and challenges in the tech landscape. China’s e-commerce giants, like Alibaba and JD.com, dominate global markets with features like live-stream shopping and rapid delivery, while Indonesia’s platforms, such as Tokopedia and Shopee, are fueling a booming e-commerce market in Southeast Asia, catering to a mobile-first population. In digital payments, China has achieved a nearly cashless society with Alipay and WeChat Pay deeply embedded in daily life. In contrast, because Indonesia is a developing country, digital payment platforms, like GoPay and OVO, are expanding financial inclusion and providing accessible financial services, particularly for underserved communities. When it comes to connectivity, China has quickly rolled out 5G networks, which support innovations like smart cities and IoT applications. Indonesia is also making strides in 5G, though rural connectivity remains a challenge. Additionally, China is a global leader in AI, applying advanced technologies across healthcare, surveillance, and manufacturing, while Indonesia has seen rapid growth in EdTech, with platforms like Ruangguru enhancing access to education. Despite their progress, both countries face challenges: China contends with regulatory scrutiny and privacy concerns, while Indonesia is working to bridge the digital divide and improve cybersecurity. As both nations continue to invest in technology and infrastructure, they are poised to drive significant digital innovation, influencing tech trends throughout Asia and beyond in the years ahead.</p >
+      <h2>Welcome to Asia's Digital Evolution</h2>
+      <p>Discover the evolving tech landscapes of China and Indonesia, two countries at the forefront of Asia's digital growth. China, with e-commerce giants like Alibaba and JD.com, is transforming online shopping through live-stream sales and rapid delivery. At the same time, platforms like Tokopedia and Shopee are driving Indonesia's mobile-first e-commerce boom, making it a hub for Southeast Asia.</p >
     </section>
 
     <!-- Interactive Map -->
@@ -166,8 +228,8 @@
       <h2>Interactive Map</h2>
       <p>Click the buttons to focus on Indonesia or China.</p >
       <div id="controls">
-        <button onclick="focusIndonesia()">Show Indonesia</button>
-        <button onclick="focusChina()">Show China</button>
+        <button onclick="focusIndonesia()">Indonesia</button>
+        <button onclick="focusChina()">China</button>
       </div>
       <div id="map"></div>
     </section>
@@ -175,14 +237,15 @@
 	<section id="Digital Payment">
 	  <h2>Digital Payment</h2>
       <div style="margin-top: 20px;">
-        <button onclick="showAlipay()">Show Alipay</button>
-        <button onclick="showShopeePay()">Show ShopeePay</button>
+        <button onclick="showAlipay()">Alipay</button>
+        <button onclick="showShopeePay()">ShopeePay</button>
         <div id="app-icons" style="margin-top: 20px;"></div>
       </div>
 	 </section>
 	 <!-- 5G Development -->
 	 <section id="5G Development">
 	  <h2>5G Development</h2>
+	  <p>Both countries are pushing forward with 5G technology: China is leading with smart cities and loT, while Indonesia focuses on improving rural connectivity.</p>
       <label for="country-input">Enter a country (China or Indonesia):</label>
       <input type="text" id="country-input" placeholder="Type here..." oninput="showCountryInfo()">
       <div id="country-info" style="margin-top: 20px;"></div>
@@ -238,15 +301,48 @@
           </tr>
         </tbody>
       </table>
+	  <p></p>
 	  </div>
     </section>
 
     <!-- Conclusion -->
     <section id="conclusion">
-      <h2>Conclusion</h2>
-      <p>Watch the video below to learn more about technology developments in China and Indonesia:</p >
+	<h2>Using technology to overcome obstacles and inspire progress</h2>
+      <p>China is leading the way in the technology industry, setting global trends and driving innovation at an unprecedented scale. Meanwhile, Indonesia is forging its own path, leveraging technological advancements to address everyday challenges through platforms like Ruangguru, Gojek, and more. Both countries face unique hurdles-China is navigating growing concerns over privacy, while Indonesia is striving to bridge the gap in technological access between urban and rural communities. Yet, their progress highlights how thoughtful use of technology can transform lives and pave the way for a brighter, more connected future for everyone.</p >
       <iframe width="560" height="315" src="https://www.youtube.com/embed/a_jis_XlUlo?si=XPHabH2Qn6etbM1U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 	  <iframe width="560" height="315" src="https://www.youtube.com/embed/M2zVGqTddf0?si=H4yxnEtVEYQUhg5-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+  </div>
+  
+  <!--Feedback-->
+  <section id="feedback">
+      <h2>Feedback Form</h2>
+      <form id="feedbackForm">
+        <h2>We'd love to hear your thoughts</h2>
+
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="comments">Your Comments</label>
+        <textarea id="comments" name="comments" required></textarea>
+
+        <div class="rating">
+          <label>How would you rate your experience?</label>
+          <input type="radio" id="excellent" name="rating" value="Excellent" required>
+          <label for="excellent">Excellent</label>
+          <input type="radio" id="good" name="rating" value="Good">
+          <label for="good">Good</label>
+          <input type="radio" id="average" name="rating" value="Average">
+          <label for="average">Average</label>
+          <input type="radio" id="poor" name="rating" value="Poor">
+          <label for="poor">Poor</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Feedback</button>
+      </form>
     </section>
   </div>
 
@@ -290,13 +386,33 @@
       const country = document.getElementById("country-input").value.toLowerCase();
       const infoDiv = document.getElementById("country-info");
       if (country === "china") {
-        infoDiv.innerHTML = "<p>5G mobile subscribers in China reached 966 million.Additionally, 5G mobile subscribers in the Asian nation reached 966 million, the ministry added. China also claims global leadership in 5G technology, with 42% of the world's 5G standard essential patent declarations originating from the country.</p>";
+        infoDiv.innerHTML = "<p>5G mobile subscribers in China reached 966 million.Additionally, 5G mobile subscribers in the Asian nation reached 966 million, the ministry added. China also claims global leadership in 5G technology, with 42% of the world's 5G standard essential patent declarations originating from the country.</p><p><cite>The Text</cite> by Weidmüller.</p >";
       } else if (country === "indonesia") {
-        infoDiv.innerHTML = "<p>While 5G is at the start of its journey in Indonesia, the ambitious plans of the government and operators means that more than 32% of connections are expected to run over 5G by 2030, according to the GSMA Intelligence report.</p >";
+        infoDiv.innerHTML = "<p>While 5G is at the start of its journey in Indonesia, the ambitious plans of the government and operators means that more than 32% of connections are expected to run over 5G by 2030, according to the GSMA Intelligence report.</p ><cite>The Text</cite> by GSMA.</p";
       } else {
         infoDiv.innerHTML = "<p>Please enter 'China' or 'Indonesia'.</p >";
       }
     }
   </script>
+  <script>
+    const form = document.getElementById("feedbackForm");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      let feedbackData = {};
+
+      formData.forEach((value, key) => {
+        feedbackData[key] = value;
+      });
+
+      console.log("Feedback Submitted:", feedbackData);
+
+      form.reset();
+      alert("Thank you for your feedback!");
+    });
+  </script>
+  
 </body>
 </html>
